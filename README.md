@@ -1,3 +1,8 @@
+# **This is not the original version of the midnight theme**
+The goal of this fork is to also include a version of the theme that matches the catpuccin latte color palette.
+
+---
+
 <img width=800 src="https://github.com/refact0r/midnight-discord/raw/master/assets/preview.png">
 
 # midnight
