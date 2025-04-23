@@ -1,5 +1,5 @@
 # **This is not the original version of the midnight theme**
-The goal of this fork is to also include a version of the theme that matches the catpuccin latte color palette.
+The goal of this fork is to also include a version of the theme that matches the catppuccin latte color palette.
 
 ---
 
