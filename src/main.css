@@ -163,7 +163,9 @@ body {
         margin-bottom: 0;
     }
 
-    .content_f75fb0 /* chat outer */,
+    .page_c48ade > div > .chat_f75fb0 > .content_f75fb0 /* chat outer */ {
+        border-left: none;
+    }
     .tabBody__133bf /* friends page */ {
         border: none !important;
     }
@@ -321,7 +323,7 @@ body {
     }
 
     .bottom__7aaec /* channel list new unreads pill */ {
-        bottom: 12px;
+        bottom: 0px;
     }
 
     .unreadMentionsIndicatorBottom_ef3116 /* server list new pill */,

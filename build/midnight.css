@@ -164,7 +164,9 @@ body {
         margin-bottom: 0;
     }
 
-    .content_f75fb0 /* chat outer */,
+    .page_c48ade > div > .chat_f75fb0 > .content_f75fb0 /* chat outer */ {
+        border-left: none;
+    }
     .tabBody__133bf /* friends page */ {
         border: none !important;
     }
@@ -322,7 +324,7 @@ body {
     }
 
     .bottom__7aaec /* channel list new unreads pill */ {
-        bottom: 12px;
+        bottom: 0px;
     }
 
     .unreadMentionsIndicatorBottom_ef3116 /* server list new pill */,
@@ -503,7 +505,7 @@ body {
 }
 
 @container body style(--background-image: on) {
-    .visual-refresh .bg__960e4 {
+    .visual-refresh #app-mount .bg__960e4 {
         background: var(--background-image-url);
         background-size: cover;
         background-position: center;
@@ -1323,6 +1325,16 @@ body {
     initial-value: custom;
 }
 
+@container body style(--custom-dms-icon: off) {
+    .wrapper__6e9f8[data-list-item-id='guildsnav___home'] > .childWrapper__6e9f8 {
+        color: var(--dms-icon-color-before);
+    }
+    .wrapper__6e9f8[data-list-item-id='guildsnav___home']:hover > .childWrapper__6e9f8,
+    .wrapper__6e9f8[data-list-item-id='guildsnav___home'].selected__6e9f8 > .childWrapper__6e9f8 {
+        color: var(--dms-icon-color-after);
+    }
+}
+
 @container body style(--custom-dms-icon: custom) {
     .wrapper__6e9f8[data-list-item-id='guildsnav___home'] > .childWrapper__6e9f8 > svg {
         display: none;
@@ -1479,6 +1491,10 @@ body {
 }
 
 @container body style(--top-bar-button-position: titlebar) {
+    #app-mount {
+        --custom-channel-header-height: calc(var(--guildbar-avatar-size) + var(--space-xs) + var(--border-thickness) * 2);
+    }
+
     .visual-refresh {
         .title_c38106, 
         .trailing_c38106 > a[href="https://support.discord.com"]
@@ -1491,7 +1507,7 @@ body {
         .trailing_c38106 {
             position: absolute;
             top: calc(var(--top-bar-height) + 8px + var(--border-thickness));
-            right: var(--gap);
+            right: calc(var(--space-xs) + var(--border-thickness));
             gap: 0;
             z-index: 1000;
             padding-right: var(--space-xs);
@@ -1517,12 +1533,19 @@ body {
         .inviteToolbar__133bf {
             padding-right: 0;
         }
-        .base_c48ade:has(.notice__6e2b9) > .bar_c38106 > .trailing_c38106 {
-            top: calc(var(--top-bar-height) + 8px + 40px + var(--gap) + var(--border-thickness));
-        }
         .chat_f75fb0 > .layerContainer_da8173 {
             z-index: 999;
         }
+        .subtitleContainer_f75fb0 {
+            height: var(--custom-channel-header-height);
+        }
+        .title_f75fb0.container__9293f {
+            height: auto;
+            min-height: 0;
+        }
+    }
+    .base_c48ade:has(.notice__6e2b9) > .bar_c38106 > .trailing_c38106 {
+        top: calc(var(--top-bar-height) + 8px + 40px + var(--gap) + var(--border-thickness));
     }
     .base_c48ade:has(.winButtons_c38106) .toolbar__9293f {
         padding-right: calc(32px + 3 * var(--space-xs) + 6 * var(--window-control-size));
